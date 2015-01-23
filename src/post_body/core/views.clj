@@ -8,6 +8,7 @@
   [req]
   (let [my-db {:classname      "net.sourceforge.jtds.jdbc.Driver"
                :connection-uri "jdbc:jtds:sqlserver://atxcrtwmdb-q01.devid.local;user=testdev;password=testdev"}
-        result (jdbc/query my-db ["select top 10 * from [Fresh_DB].[dbo].[PARSCORE]"])]
-    (-> (response (with-out-str (pprint result)))
+        result (jdbc/query my-db ["select top 10 * from [Fresh_DB].[dbo].[PARSCORE]"])
+        dto {:request req :result result}]
+    (-> (response (with-out-str (pprint dto)))
         (content-type "text/plain"))))

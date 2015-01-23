@@ -1,4 +1,5 @@
 # post-body
+<<<<<<< HEAD
 
 FIXME
 
@@ -17,3 +18,6 @@ To start a web server for the application, run:
 ## License
 
 Copyright © 2015 FIXME
+=======
+I have no idea what I'm doing
+>>>>>>> FETCH_HEAD
